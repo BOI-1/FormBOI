@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.bgc1 {
+  background-color: #627254;
+}
+.bgc2 {
+  color: #76885b;
+}
+
+.bgc3 {
+  background-color: #dddddd;
+}
+
+.bgc4 {
+  color: #eeeeee;
+}
