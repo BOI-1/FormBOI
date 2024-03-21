@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Preview({ data }) {
   const navigate = useNavigate();
@@ -7,8 +8,31 @@ function Preview({ data }) {
     navigate("/form");
   }
 
-  function submitForm() {
-    navigate("/done");
+  async function submitForm() {
+    try {
+      await axios.post("https://formbackend-wgpc.onrender.com/submitForm", {
+        postName: data.info.postName,
+        name: data.info.name,
+        fatherName: data.info.fName,
+        dob: data.info.dob,
+        category: data.info.category,
+        address: data.info.address,
+        correspondingAddress: data.info.cAddress,
+        adhaar: data.info.adhaar,
+        pan: data.info.pan,
+        phone: data.info.phone,
+        highschoolpercent: data.quali.highSchoolPercent,
+        highschoolyear: data.quali.highSchoolYear,
+        interpercent: data.quali.interPercent,
+        interyear: data.quali.interYear,
+        diplomapercent: data.quali.diplomaPercent,
+        diplomayear: data.quali.diplomaYear,
+        exp: data.exp,
+      });
+      navigate("/done");
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
