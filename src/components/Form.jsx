@@ -79,7 +79,7 @@ function From({ data }) {
           onClick={submitForm}
           className="my-5 bg-sky-500 hover:bg-sky-400 text-white px-10 py-2 rounded-md"
         >
-          पूर्व दर्शन
+          पूर्वावलोकन
         </button>
       </div>
     </>
