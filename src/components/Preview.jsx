@@ -10,25 +10,29 @@ function Preview({ data }) {
 
   async function submitForm() {
     try {
-      await axios.post("https://formbackend-wgpc.onrender.com/submitForm", {
-        postName: data.info.postName,
-        name: data.info.name,
-        fatherName: data.info.fName,
-        dob: data.info.dob,
-        category: data.info.category,
-        address: data.info.address,
-        correspondingAddress: data.info.cAddress,
-        adhaar: data.info.adhaar,
-        pan: data.info.pan,
-        phone: data.info.phone,
-        highschoolpercent: data.quali.highSchoolPercent,
-        highschoolyear: data.quali.highSchoolYear,
-        interpercent: data.quali.interPercent,
-        interyear: data.quali.interYear,
-        diplomapercent: data.quali.diplomaPercent,
-        diplomayear: data.quali.diplomaYear,
-        exp: data.exp,
-      });
+      const response = await axios.post(
+        "https://formbackend-wgpc.onrender.com/submitForm",
+        {
+          designation: data.info.designation,
+          name: data.info.name,
+          fName: data.info.fName,
+          dob: data.info.dob,
+          category: data.info.category,
+          address: data.info.address,
+          cAddress: data.info.cAddress,
+          adharr: data.info.adharr,
+          pan: data.info.pan,
+          phone: data.info.phone,
+          highSchoolPercent: data.quali.highSchoolPercent,
+          highSchoolYear: data.quali.highSchoolYear,
+          interPercent: data.quali.interPercent,
+          interYear: data.quali.interYear,
+          diplomaPercent: data.quali.diplomaPercent,
+          diplomaYear: data.quali.diplomaYear,
+          exp: data.exp,
+        }
+      );
+      console.log(response);
       navigate("/done");
     } catch (e) {
       console.log(e);
