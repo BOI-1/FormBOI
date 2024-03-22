@@ -308,9 +308,13 @@ function Info({ infoData }) {
             <option disabled value="">
               वर्ग
             </option>
-            <option value="सामान्य">सामान्य</option>
-            <option value="अन्य पिछड़ा वर्ग">अन्य पिछड़ा वर्ग</option>
-            <option value="एससी/एसटी">एससी/एसटी</option>
+            <option value="सामान्य वर्ग">सामान्य वर्ग</option>
+            <option value="पिछड़ा वर्ग">पिछड़ा वर्ग</option>
+            <option value="अनुसूचित जाति अथवा जनजाति">अनुसूचित जाति अथवा जनजाति</option>
+            <option value="अन्य पिछड़ा वर्ग">अन्य पिछड़ा वर्ग</option>
+            <option value="आर्थिक रुप से पिछड़ा">आर्थिक रुप से पिछड़ा</option>
+            <option value="ट्रांसजेंडर">ट्रांसजेंडर</option>
+            <option value="महिला">महिला</option>
           </select>
         </label>
         <label className="form-control w-full max-w-xs">
@@ -347,7 +351,7 @@ function Info({ infoData }) {
           </div>
           <input
             type="number"
-            placeholder="जैसे. 0000-0000-0000"
+            placeholder="0000-0000-0000"
             className="appearance-none input input-bordered w-full max-w-xs "
             onChange={adharrHandle}
           />
@@ -358,7 +362,7 @@ function Info({ infoData }) {
           </div>
           <input
             type="text"
-            placeholder="जैसे. AAAAA-0000-A"
+            placeholder="AAAAA-0000-A"
             className="input input-bordered w-full max-w-xs"
             onChange={panHandle}
           />
@@ -371,7 +375,7 @@ function Info({ infoData }) {
           </div>
           <input
             type="number"
-            placeholder="जैसे. +91 00000-00000"
+            placeholder="+91 00000-00000"
             className="input input-bordered w-full max-w-xs appearance-none"
             onChange={phoneHandle}
           />
