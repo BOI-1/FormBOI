@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 
 function Preview({ data }) {
   const navigate = useNavigate();
