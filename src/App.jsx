@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Details />} />
         <Route path="/form" element={<Form data={data} />} />
-        <Route path="/preview" element={<Preview />} />
+        <Route path="/preview" element={<Preview data={data1} />} />
         <Route path="/pay" element={<Pay data={data1} />} />
         <Route path="/done" element={<Done />} />
       </Routes>
