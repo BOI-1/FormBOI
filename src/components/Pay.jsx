@@ -92,15 +92,15 @@ function Pay({ data }) {
         />
         <br />
         <br />
-        <div className="flex justify-center">
+        <div className="flex justify-evenly">
           <button
-            className="bg-blue-500 text-white px-5 py-2 rounded-lg w-1/2"
+            className="bg-gray-300 text-white px-5 py-2 rounded-lg w-1/3"
             onClick={back}
           >
             पीछे जाए
           </button>
           <button
-            className="bg-blue-500 text-white px-5 py-2 rounded-lg w-1/2"
+            className="bg-blue-500 text-white px-5 py-2 rounded-lg w-1/3"
             onClick={submitForm}
           >
             जमा
