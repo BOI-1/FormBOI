@@ -3,7 +3,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Pay({ data }) {
-    
   const [id, setId] = useState("");
 
   const navigate = useNavigate();
@@ -34,7 +33,9 @@ function Pay({ data }) {
         }
       );
       console.log(response);
-      navigate("/done");
+      if (response.data.status === 200) {
+        navigate("/done");
+      }
     } catch (e) {
       console.log(e);
     }
