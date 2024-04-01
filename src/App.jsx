@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import Details from "./components/Details";
 import { Routes, Route } from "react-router-dom";
 import Preview from "./components/Preview";
+import Pay from "./components/Pay";
 import Done from "./components/done";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   function data(data) {
     setData1(data);
-    console.log(data)
+    console.log(data);
   }
 
   return (
@@ -18,7 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Details />} />
         <Route path="/form" element={<Form data={data} />} />
-        <Route path="/preview" element={<Preview data={data1} />} />
+        <Route path="/preview" element={<Preview />} />
+        <Route path="/pay" element={<Pay data={data1} />} />
         <Route path="/done" element={<Done />} />
       </Routes>
     </>

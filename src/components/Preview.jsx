@@ -1,43 +1,47 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Preview({ data }) {
+function Preview() {
   const navigate = useNavigate();
 
   function back() {
     navigate("/form");
   }
 
-  async function submitForm() {
-    try {
-      const response = await axios.post(
-        "https://formbackend-wgpc.onrender.com/submitForm",
-        {
-          designation: data.info.designation,
-          name: data.info.name,
-          fName: data.info.fName,
-          dob: data.info.dob,
-          category: data.info.category,
-          address: data.info.address,
-          cAddress: data.info.cAddress,
-          adharr: data.info.adharr,
-          pan: data.info.pan,
-          phone: data.info.phone,
-          highSchoolPercent: data.quali.highSchoolPercent,
-          highSchoolYear: data.quali.highSchoolYear,
-          interPercent: data.quali.interPercent,
-          interYear: data.quali.interYear,
-          diplomaPercent: data.quali.diplomaPercent,
-          diplomaYear: data.quali.diplomaYear,
-          exp: data.exp,
-        }
-      );
-      console.log(response);
-      navigate("/done");
-    } catch (e) {
-      console.log(e);
-    }
+  function payFees() {
+    navigate("/pay")
   }
+
+  // async function submitForm() {
+  //   try {
+  //     const response = await axios.post(
+  //       "https://formbackend-wgpc.onrender.com/submitForm",
+  //       {
+  //         designation: data.info.designation,
+  //         name: data.info.name,
+  //         fName: data.info.fName,
+  //         dob: data.info.dob,
+  //         category: data.info.category,
+  //         address: data.info.address,
+  //         cAddress: data.info.cAddress,
+  //         adharr: data.info.adharr,
+  //         pan: data.info.pan,
+  //         phone: data.info.phone,
+  //         highSchoolPercent: data.quali.highSchoolPercent,
+  //         highSchoolYear: data.quali.highSchoolYear,
+  //         interPercent: data.quali.interPercent,
+  //         interYear: data.quali.interYear,
+  //         diplomaPercent: data.quali.diplomaPercent,
+  //         diplomaYear: data.quali.diplomaYear,
+  //         exp: data.exp,
+  //       }
+  //     );
+  //     console.log(response);
+  //     navigate("/done");
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }
 
   return (
     <div className="mx-20 my-6">
@@ -198,10 +202,10 @@ function Preview({ data }) {
           पीछे जाए
         </button>
         <button
-          onClick={submitForm}
+          onClick={payFees}
           className="my-5 bg-sky-500 hover:bg-sky-400 text-white px-10 py-2 rounded-md"
         >
-          जमा करे
+          शुल्क भुगतान करें
         </button>
       </div>
     </div>
