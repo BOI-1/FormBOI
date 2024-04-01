@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Pay({ data }) {
+    
   const [id, setId] = useState("");
+
+  const navigate = useNavigate();
+
   async function submitForm() {
     try {
       const response = await axios.post(
