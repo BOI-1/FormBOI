@@ -94,7 +94,7 @@ function Pay({ data }) {
         <br />
         <div className="flex justify-evenly">
           <button
-            className="bg-gray-300 text-white px-5 py-2 rounded-lg w-1/3"
+            className="bg-gray-400 text-white px-5 py-2 rounded-lg w-1/3"
             onClick={back}
           >
             पीछे जाए
