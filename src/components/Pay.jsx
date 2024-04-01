@@ -7,6 +7,10 @@ function Pay({ data }) {
 
   const navigate = useNavigate();
 
+  function back() {
+    navigate("/form");
+  }
+
   async function submitForm() {
     try {
       const response = await axios.post(
@@ -89,6 +93,12 @@ function Pay({ data }) {
         <br />
         <br />
         <div className="flex justify-center">
+          <button
+            className="bg-blue-500 text-white px-5 py-2 rounded-lg w-1/2"
+            onClick={back}
+          >
+            पीछे जाए
+          </button>
           <button
             className="bg-blue-500 text-white px-5 py-2 rounded-lg w-1/2"
             onClick={submitForm}
