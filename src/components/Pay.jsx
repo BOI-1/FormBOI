@@ -14,7 +14,7 @@ function Pay({ data }) {
   async function submitForm() {
     try {
       const response = await axios.post(
-        "https://formbackend-wgpc.onrender.com/submitForm",
+        "https://stingray-app-k5773.ondigitalocean.app/submitForm",
         {
           designation: data.info.designation,
           name: data.info.name,
