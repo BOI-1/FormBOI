@@ -14,7 +14,7 @@ function Pay({ data }) {
   async function submitForm() {
     try {
       const response = await axios.post(
-        "https://formbackend-wgpc.onrender.com/submitForm",
+        "https://king-prawn-app-fxdww.ondigitalocean.app/submitForm",
         {
           designation: data.info.designation,
           name: data.info.name,
