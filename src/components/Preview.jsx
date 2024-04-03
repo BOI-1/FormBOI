@@ -114,6 +114,11 @@ function Preview({ data }) {
               <td>फ़ोन नंबर</td>
               <td>{data.info.phone}</td>
             </tr>
+            <tr>
+              <th>11</th>
+              <td>ईमेल</td>
+              <td>{data.info.email}</td>
+            </tr>
           </tbody>
         </table>
 
