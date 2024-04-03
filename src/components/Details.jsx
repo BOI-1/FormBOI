@@ -7,7 +7,7 @@ function Details() {
   return (
     <>
       <div className="text-xl underline font-bold flex justify-center pt-4">
-        विज्ञापन का विवरण
+        CAGDI Jobs Application Form
       </div>
 
       <div className="px-16 py-6">

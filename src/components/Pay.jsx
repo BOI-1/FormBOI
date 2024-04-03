@@ -26,6 +26,7 @@ function Pay({ data }) {
           adharr: data.info.adharr,
           pan: data.info.pan,
           phone: data.info.phone,
+          email: data.info.email,
           highSchoolPercent: data.quali.highSchoolPercent,
           highSchoolYear: data.quali.highSchoolYear,
           interPercent: data.quali.interPercent,
@@ -54,8 +55,8 @@ function Pay({ data }) {
         <div className="px-3 py-7">
           <div>
             आवेदन शुल्क जमा कराने हेतु नोट-: अभ्यर्थियों अथवा आवेदकों द्वारा
-            आवेदन शुल्क को नेफ्ट(NEFT) अथवा आई.एम.पी.एस.(IMPS) अथवा यथोचित अंतरण माध्यम से
-            निम्न संस्थागत खाता विवरण :-
+            आवेदन शुल्क को नेफ्ट(NEFT) अथवा आई.एम.पी.एस.(IMPS) अथवा यथोचित अंतरण
+            माध्यम से निम्न संस्थागत खाता विवरण :-
           </div>
           <div className=" border-2 border-gray-400 my-5 p-5 w-fit bg-gray-100 rounded">
             {" "}

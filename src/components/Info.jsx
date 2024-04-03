@@ -11,6 +11,7 @@ function Info({ infoData }) {
   const [adharr, setAdharr] = useState("");
   const [pan, setPan] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   function nameHandle(e) {
     setName(e.target.value);
@@ -44,6 +45,10 @@ function Info({ infoData }) {
     setPhone(e.target.value);
   }
 
+  function emailHandle(e) {
+    setEmail(e.target.value);
+  }
+
   function handleSubmit() {
     infoData({
       designation,
@@ -56,6 +61,7 @@ function Info({ infoData }) {
       adharr,
       pan,
       phone,
+      email,
     });
   }
 
@@ -310,7 +316,9 @@ function Info({ infoData }) {
             </option>
             <option value="सामान्य वर्ग">सामान्य वर्ग</option>
             <option value="पिछड़ा वर्ग">पिछड़ा वर्ग</option>
-            <option value="अनुसूचित जाति अथवा जनजाति">अनुसूचित जाति अथवा जनजाति</option>
+            <option value="अनुसूचित जाति अथवा जनजाति">
+              अनुसूचित जाति अथवा जनजाति
+            </option>
             <option value="अन्य पिछड़ा वर्ग">अन्य पिछड़ा वर्ग</option>
             <option value="आर्थिक रुप से पिछड़ा">आर्थिक रुप से पिछड़ा</option>
             <option value="ट्रांसजेंडर">ट्रांसजेंडर</option>
@@ -378,6 +386,19 @@ function Info({ infoData }) {
             placeholder="+91 00000-00000"
             className="input input-bordered w-full max-w-xs appearance-none"
             onChange={phoneHandle}
+          />
+        </label>
+        <label className="form-control w-full max-w-xs">
+          <div className="label">
+            <span className="label-text">
+              11. ईमेल <span className="text-red-500">*</span>
+            </span>
+          </div>
+          <input
+            type="text"
+            placeholder="abc@abc.com"
+            className="input input-bordered w-full max-w-xs appearance-none"
+            onChange={emailHandle}
           />
         </label>
       </div>
