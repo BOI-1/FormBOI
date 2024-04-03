@@ -1,6 +1,15 @@
+/**
+ * The `Info` function in this React component handles the input fields for personal information in a
+ * form, including fields for designation, name, father's name, date of birth, category, address,
+ * contact details, and email, with a submit button to save the data.
+ */
 import React, { useState } from "react";
 
 function Info({ infoData }) {
+ /* The below code snippet is using React's `useState` hook to declare and initialize multiple state
+ variables for a form. Each state variable corresponds to a specific field in the form, such as
+ designation, name, father's name (fName), date of birth (dob), category, address, current address
+ (cAddress), Aadhar number (adharr), PAN number (pan), phone number, and email. */
   const [designation, setDesignation] = useState("");
   const [name, setName] = useState("");
   const [fName, setFName] = useState("");
@@ -13,6 +22,10 @@ function Info({ infoData }) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
+  /**
+   * The below code defines several event handler functions and a submit function for handling form
+   * data in a React component.
+   */
   function nameHandle(e) {
     setName(e.target.value);
   }

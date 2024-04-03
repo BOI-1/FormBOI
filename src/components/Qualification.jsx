@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 function Qualification({ qualificationDetail }) {
+  /* These lines of code are using the `useState` hook in React to create state variables for managing
+  the input values related to educational qualifications. Here's a breakdown of what each line is
+  doing: */
   const [highSchoolPercent, setHighSchoolPercent] = useState("");
   const [highSchoolYear, setHighSchoolYear] = useState("");
   const [interPercent, setInterPercent] = useState("");
@@ -8,6 +11,9 @@ function Qualification({ qualificationDetail }) {
   const [diplomaPercent, setdiplomaPercent] = useState("");
   const [diplomaYear, setdiplomaYear] = useState("");
 
+ /**
+  * The handleSubmit function calls the qualificationDetail function with specific parameters.
+  */
   function handleSubmit() {
     qualificationDetail({
       highSchoolPercent,
@@ -122,4 +128,7 @@ function Qualification({ qualificationDetail }) {
   );
 }
 
+/* `export default Qualification;` is exporting the `Qualification` component as the default export
+from this file. This allows other files to import and use the `Qualification` component by importing
+it without curly braces, like `import Qualification from './Qualification';`. */
 export default Qualification;

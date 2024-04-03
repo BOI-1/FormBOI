@@ -3,6 +3,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Pay({ data }) {
+/**
+ * The code snippet defines a React component with state for an ID and a function to navigate back to a
+ * "/form" route.
+ */
   const [id, setId] = useState("");
 
   const navigate = useNavigate();
@@ -11,6 +15,10 @@ function Pay({ data }) {
     navigate("/form");
   }
 
+ /**
+  * The function `submitForm` sends a POST request to a specific URL with form data and handles the
+  * response accordingly.
+  */
   async function submitForm() {
     try {
       const response = await axios.post(
@@ -46,6 +54,9 @@ function Pay({ data }) {
     }
   }
 
+  /* The `return` statement in the code snippet is rendering a JSX structure that represents the UI of
+  a payment form component in a React application. Here's a breakdown of what each part of the JSX
+  structure is doing: */
   return (
     <div className="flex justify-center items-center h-screen ">
       <div className="border-2 border-gray-600 px-5 py-3 rounded w-1/2">

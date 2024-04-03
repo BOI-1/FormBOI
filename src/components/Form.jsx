@@ -1,3 +1,12 @@
+/**
+ * The `From` component in a React application handles form data input and navigation to a preview
+ * page.
+ * @returns The `From` component is returning a form with details in Hindi for an application form. It
+ * includes sections for providing information, qualifications, and experience. The form also has
+ * buttons for navigating back and submitting the form for preview.
+ */
+/* The `import` statements in the code snippet are used to import necessary modules and components in a
+React application. */
 import React, { useState } from "react";
 import Info from "./Info";
 import Qualification from "./Qualification";
@@ -5,10 +14,18 @@ import Exp from "./Exp";
 import { useNavigate } from "react-router-dom";
 
 function From({ data }) {
+  /* The code snippet `const [info, setInfo] = useState(null); const [quali, setQuali] = useState(null);
+ const [exp, setExp] = useState(null);` is using the `useState` hook from React to declare three
+ state variables `info`, `quali`, and `exp` along with their respective setter functions `setInfo`,
+ `setQuali`, and `setExp`. */
   const [info, setInfo] = useState(null);
   const [quali, setQuali] = useState(null);
   const [exp, setExp] = useState(null);
 
+  /**
+   * The below code snippet contains functions for submitting form data, navigating between pages, and
+   * updating state variables in a React component.
+   */
   const navigate = useNavigate();
 
   function submitForm() {
@@ -64,6 +81,10 @@ function From({ data }) {
         संख्या:0012/के.कृ.वि.सं./(मनो.-01)/2023-24 दिनांक: 13 मार्च 2024 के क्रम
         में निम्न विवरण के तहत आवेदन |
       </div>
+      {/* The code snippet `<Info infoData={infoData} />
+     <Qualification qualificationDetail={qualificationDetail} />
+     <Exp experience={experience} />` is passing down callback functions as props to child
+     components in a React application. */}
       <Info infoData={infoData} />
       <Qualification qualificationDetail={qualificationDetail} />
       <Exp experience={experience} />

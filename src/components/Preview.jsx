@@ -2,6 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 
 function Preview({ data }) {
+ /**
+  * The code snippet uses the useNavigate hook from React to navigate to different paths ("/form" and
+  * "/pay") when the back() and payFees() functions are called.
+  */
   const navigate = useNavigate();
 
   function back() {
@@ -12,37 +16,9 @@ function Preview({ data }) {
     navigate("/pay")
   }
 
-  // async function submitForm() {
-  //   try {
-  //     const response = await axios.post(
-  //       "https://formbackend-wgpc.onrender.com/submitForm",
-  //       {
-  //         designation: data.info.designation,
-  //         name: data.info.name,
-  //         fName: data.info.fName,
-  //         dob: data.info.dob,
-  //         category: data.info.category,
-  //         address: data.info.address,
-  //         cAddress: data.info.cAddress,
-  //         adharr: data.info.adharr,
-  //         pan: data.info.pan,
-  //         phone: data.info.phone,
-  //         highSchoolPercent: data.quali.highSchoolPercent,
-  //         highSchoolYear: data.quali.highSchoolYear,
-  //         interPercent: data.quali.interPercent,
-  //         interYear: data.quali.interYear,
-  //         diplomaPercent: data.quali.diplomaPercent,
-  //         diplomaYear: data.quali.diplomaYear,
-  //         exp: data.exp,
-  //       }
-  //     );
-  //     console.log(response);
-  //     navigate("/done");
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
+ /* This code snippet is a React component named `Preview` that displays a preview of personal,
+ educational, and experience information. It renders this information in a structured format using
+ HTML elements like tables and buttons. Here's a breakdown of what the code is doing: */
   return (
     <div className="mx-20 my-6">
       <div className="overflow-x-auto">

@@ -1,3 +1,5 @@
+/* This code snippet is a React component named `Exp` that allows users to input their experiences.
+Here's a breakdown of what the code is doing: */
 import React, { useState } from "react";
 import { UserPlus, X } from "lucide-react";
 
