@@ -32,6 +32,7 @@ hook from React to declare a state variable named `data1` and a function to upda
       a specific path and the corresponding component that should be rendered when that path is
       matched. */}
       <Routes>
+        <Route path="/" element={<Details />} />
         <Route path="/form" element={<Form data={data} />} />
         <Route path="/preview" element={<Preview data={data1} />} />
         <Route path="/pay" element={<Pay data={data1} />} />
