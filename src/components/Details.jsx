@@ -1,7 +1,13 @@
 import React from "react";
+/* The above code is importing the `useNavigate` hook from the `react-router-dom` library in a
+JavaScript React application. This hook is typically used for navigating programmatically within a
+React application. */
 import { useNavigate } from "react-router-dom";
 
 function Details() {
+  /* The above code snippet is using the `useNavigate` hook from React Router to get the `navigate`
+  function. This function can be used to programmatically navigate to different routes in a React
+  application. */
   const navigate = useNavigate();
 
   return (
@@ -607,4 +613,5 @@ function Details() {
   );
 }
 
+/* The above code is a JavaScript React component named Details being exported as the default export. */
 export default Details;
